@@ -7,26 +7,15 @@ public class Cheese {
 
     private String name;
     private String description;
+<<<<<<< Updated upstream
     private int cheeseId;
     private static int nextId = 1;
+=======
+>>>>>>> Stashed changes
 
     public Cheese(String name, String description) {
-        this();
         this.name = name;
         this.description = description;
-    }
-
-    public Cheese() {
-        cheeseId = nextId;
-        nextId++;
-    }
-
-    public int getCheeseId() {
-        return cheeseId;
-    }
-
-    public void setCheeseId(int cheeseId) {
-        this.cheeseId = cheeseId;
     }
 
     public String getName() {
@@ -44,4 +33,7 @@ public class Cheese {
     public void setDescription(String description) {
         this.description = description;
     }
+<<<<<<< Updated upstream
 }
+=======
+>>>>>>> Stashed changes

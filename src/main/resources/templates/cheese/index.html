@@ -4,10 +4,15 @@
 
 <body class="container">
 
+<!--thymeleaf equivalent of what jinja for python did by pulling over title from our controller
+    class and must be named the same as the attribute name we gave it
+    ${ tells thymeleaf to look in the model for value "title" and passes it in-->
 <h1 th:text="${title}">Default Title</h1>
 
 <nav th:replace="fragments :: navigation"></nav>
 
+<!--unless is like "if not", so if no cheese items are passed in..
+    .size checks to see if the list is zero-->
 <p th:unless="${cheeses} and ${cheeses.size()}">no cheese :(</p>
 
 
@@ -17,7 +22,9 @@
         <th>Name</th>
         <th>Description</th>
     </tr>
-
+        <!--for loop in a table "for chees in cheeses"-->
+        <!--display cheese name-->
+        <!--display cheese description-->
     <tr th:each="cheese : ${cheeses}">
         <td th:text="${cheese.name}"></td>
         <td th:text="${cheese.description}"></td>
